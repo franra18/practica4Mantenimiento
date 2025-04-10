@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <groupId>org.mps</groupId>
-  <artifactId>mps4</artifactId>
-  <version>1.0-SNAPSHOT</version>
-
-  <name>mps4</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	 <maven.compiler.source>21</maven.compiler.source>
-     <maven.compiler.target>21</maven.compiler.target>
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!--Informacion del proyecto -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.example</groupId>
+	<artifactId>junit5-mps-uma</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	
+	<!--Propiedades del proyecto y maven-->
+	<!--
+	 <properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<maven.compiler.source>22</maven.compiler.source>
+    	<maven.compiler.target>22</maven.compiler.target>
   </properties>
+  -->
 
-  <!--Reutilizar versiones para las dependencias -->
+	<!--Reutilizar versiones para las dependencias -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -42,13 +41,13 @@
 		<dependency>
     		<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
-			<version>5.7.0</version>
+			<version>5.16.0</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-junit-jupiter</artifactId>
-			<version>5.7.0</version>
+			<version>5.16.0</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -62,7 +61,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.1</version>
+				<version>3.5.2</version>
 			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
