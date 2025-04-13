@@ -51,7 +51,8 @@ public class EvolutionaryAlgorithm {
             int[][] offspringPopulation = new int[population.length][population[0].length];
 
             // Aplicamos operadores de selección y cruce para generar descendientes
-            for (int i = 0; i < population.length; i += 2) {
+            int i = 0;
+            for (; i < population.length -1; i += 2) {
                 // Seleccionamos dos individuos de la población actual
                 int[] parent1 = selectionOperator.select(population[i]);
                 int[] parent2 = selectionOperator.select(population[i + 1]);
@@ -62,13 +63,18 @@ public class EvolutionaryAlgorithm {
                 offspringPopulation[i + 1] = offspring[1];
             }
 
+            // Si la población es impar, copiamos el último individuo sin cruzar
+            if (population.length % 2 != 0) {
+                offspringPopulation[population.length - 1] = population[population.length - 1].clone();
+            }
+
             // Aplicamos operador de mutación a los descendientes
-            for (int i = 0; i < offspringPopulation.length; i++) {
+            for (i = 0; i < offspringPopulation.length; i++) {
                 offspringPopulation[i] = mutationOperator.mutate(offspringPopulation[i]);
             }
 
             // Reemplazo
-            for (int i = 0; i < population.length; i++) {
+            for (i = 0; i < population.length; i++) {
                 if (better(offspringPopulation[i], population[i])) {
                     population[i] = offspringPopulation[i];
                 }
