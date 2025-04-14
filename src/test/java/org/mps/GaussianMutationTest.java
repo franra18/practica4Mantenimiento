@@ -5,11 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Field;
 import java.util.Arrays;
-import java.util.Random;
 
-import org.mps.EvolutionaryAlgorithmException;
 import org.mps.mutation.GaussianMutation;
 
 public class GaussianMutationTest {
