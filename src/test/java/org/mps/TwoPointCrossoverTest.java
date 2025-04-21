@@ -1,3 +1,4 @@
+// Grupo formado por Francisco Ramírez Cañadas y Jorge Repullo Serrano.
 package org.mps;
 
 import static org.junit.jupiter.api.Assertions.*;
